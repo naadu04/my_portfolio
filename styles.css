@@ -387,76 +387,8 @@ body {
     transform: scale(1.05);
 }
 
-.project-image img {
-    cursor: pointer;
-}
-
 .project-info {
     padding: 2rem;
-}
-
-.project-modal {
-    position: fixed;
-    inset: 0;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    z-index: 2000;
-}
-
-.project-modal.active {
-    display: flex;
-}
-
-.project-modal-backdrop {
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.75);
-}
-
-.project-modal-dialog {
-    position: relative;
-    z-index: 1;
-    max-width: 900px;
-    width: 90%;
-    background: white;
-    border-radius: 16px;
-    padding: 1.5rem;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
-}
-
-.project-modal-dialog h3 {
-    margin-bottom: 1rem;
-    color: var(--secondary-color);
-    text-align: center;
-}
-
-.project-modal-dialog img {
-    width: 100%;
-    max-height: 75vh;
-    object-fit: contain;
-    display: block;
-    border-radius: 12px;
-    background: #f5f5f5;
-}
-
-.project-modal-close {
-    position: absolute;
-    top: 0.75rem;
-    right: 0.75rem;
-    width: 38px;
-    height: 38px;
-    border: none;
-    background: rgba(0, 0, 0, 0.08);
-    color: var(--secondary-color);
-    font-size: 2rem;
-    line-height: 1;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-.project-modal-close:hover {
-    background: rgba(0, 0, 0, 0.12);
 }
 
 .project-info {

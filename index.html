@@ -116,7 +116,7 @@
                             <span>Power Query</span>
                             <span>Data Cleaning</span>
                         </div>
-                        <a href="#" class="btn btn-secondary project-view-btn" data-image="images/SwTED.png" data-title="SwiftTeck Employee Data">View Details</a>
+                        <a href="reports/swiftteck-employee-data.pdf" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">View Report</a>
                         <a href="https://github.com/naadu04/my_projects/tree/main/SwiftTeck%20Employee_Data" class="btn btn-github" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a>
                     </div>
                 </div>
@@ -133,7 +133,7 @@
                             <span>Data Visualization</span>
                             <span>Data Analysis</span>
                         </div>
-                        <a href="#" class="btn btn-secondary project-view-btn" data-image="images/NYHDs.png" data-title="NY Housing Data Analysis">View Details</a>
+                        <a href="reports/ny-housing-data-analysis.pdf" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">View Report</a>
                         <a href="https://github.com/naadu04/my_projects/tree/main/NY-Housing" class="btn btn-github" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a>
                     </div>
                 </div>
@@ -149,7 +149,7 @@
                             <span>SQL</span>
                             <span>Data Analysis</span>
                         </div>
-                        <a href="#" class="btn btn-secondary project-view-btn" data-image="images/BSEC.png" data-title="BSky Eye Clinic Data">View Details</a>
+                        <a href="reports/bsky-eye-clinic-data.pdf" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">View Report</a>
                         <a href="https://github.com/naadu04/my_projects/tree/main/BSKY-Eye-Clinic-Database" class="btn btn-github" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a>
                     </div>
                 </div>
@@ -167,7 +167,7 @@
                             <span>Python</span>
                             <span>Data Analysis</span>
                         </div>
-                        <a href="#" class="btn btn-secondary project-view-btn" data-image="images/TCH.png" data-title="Telco-Customer-Churn">View Details</a>
+                        <a href="reports/telco-customer-churn.pdf" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">View Report</a>
                         <a href="https://github.com/naadu04/my_projects/tree/main/Telco-Customer-Churn" class="btn btn-github" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i> GitHub</a>
                     </div>
                 </div>
@@ -184,7 +184,7 @@
                             <span>Data Analysis</span>
                             <span>Excel</span>
                         </div>
-                        <a href="#" class="btn btn-secondary project-view-btn" data-image="images/AIADB.png" data-title="AI-Integrated Data Analysis">View Details</a>
+                        <a href="reports/ai-integrated-data-analysis.pdf" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">View Report</a>
                         <a href="https://retail-analysis-insights.onrender.com" class="btn btn-retail-analysis" target="_blank" rel="noopener noreferrer"><i class="fas fa-chart-line" aria-hidden="true"></i> Retail Analysis</a>
                     </div>
                 </div>
@@ -200,7 +200,7 @@
                             <span>CSR</span>
                             <span>Social Responsibility</span>
                         </div>
-                        <a href="#" class="btn btn-secondary project-view-btn" data-image="images/CSRP.png" data-title="Corporate Social Responsibility Project">View Details</a>
+                        <a href="reports/corporate-social-responsibility-project.pdf" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">View Report</a>
                         <a href="https://youtu.be/U9_liCc5Dms?si=Dg7RFNdToQH9EYtA" class="btn btn-youtube" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube" aria-hidden="true"></i> YouTube</a>
                     </div>
                 </div> 
@@ -258,15 +258,6 @@
             </div>
         </div>
     </section>
-
-    <div class="project-modal" id="projectModal" aria-hidden="true">
-        <div class="project-modal-backdrop" data-close="true"></div>
-        <div class="project-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="projectModalTitle">
-            <button class="project-modal-close" aria-label="Close image preview">&times;</button>
-            <h3 id="projectModalTitle">Project Preview</h3>
-            <img id="projectModalImage" src="" alt="Project preview">
-        </div>
-    </div>
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
@@ -350,42 +341,6 @@
             });
         });
 
-        const modal = document.getElementById('projectModal');
-        const modalTitle = document.getElementById('projectModalTitle');
-        const modalImage = document.getElementById('projectModalImage');
-        const modalClose = document.querySelector('.project-modal-close');
-
-        document.querySelectorAll('.project-view-btn').forEach(button => {
-            button.addEventListener('click', function (e) {
-                e.preventDefault();
-                const imageSrc = this.dataset.image;
-                const imageTitle = this.dataset.title;
-
-                modalImage.src = imageSrc;
-                modalImage.alt = imageTitle;
-                modalTitle.textContent = imageTitle;
-                modal.classList.add('active');
-                modal.setAttribute('aria-hidden', 'false');
-            });
-        });
-
-        function closeProjectModal() {
-            modal.classList.remove('active');
-            modal.setAttribute('aria-hidden', 'true');
-        }
-
-        modalClose.addEventListener('click', closeProjectModal);
-        modal.addEventListener('click', function (e) {
-            if (e.target.dataset.close === 'true' || e.target === modal) {
-                closeProjectModal();
-            }
-        });
-
-        document.addEventListener('keydown', function (e) {
-            if (e.key === 'Escape' && modal.classList.contains('active')) {
-                closeProjectModal();
-            }
-        });
     </script>
 </body>
 </html>
